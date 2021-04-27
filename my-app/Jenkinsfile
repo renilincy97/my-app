@@ -23,7 +23,7 @@ node{
     }
    sh 'docker push lincy97/myweb:0.0.2'
    }
-   stage('Nexus Image Push'){
+  stage('Nexus Image Push'){
    sh "docker login -u admin -p admin123 34.204.194.62:8083"
    sh "docker tag lincy97/myweb:0.0.2 34.204.194.62:8083/damo:1.0.0"
    sh 'docker push 34.204.194.62:8083/damo:1.0.0'
